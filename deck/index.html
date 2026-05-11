@@ -5,6 +5,7 @@
 <title>Exoplanet ML Classifier — Defense deck</title>
 <link rel="stylesheet" href="deck.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"/>
+<script src="image-slot.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
   onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\\\[',right:'\\\\]',display:true},{left:'\\\\(',right:'\\\\)',display:false}],throwOnError:false});"></script>
@@ -41,11 +42,21 @@
   <div class="grain"></div><div class="stars"></div>
   <div class="title-content">
     <div class="title-row">
-      <img src="../assets/eci-centauri-logo.png" alt="ECI Centauri"/>
-      <div>
+      <img class="logo" src="../assets/eci-centauri-logo.png" alt="ECI Centauri"/>
+      <div style="flex:1;">
         <div class="title-eyebrow">Master's Defense · MLEA_M · 2026-1</div>
         <h1 class="title-h">Exoplanet ML<br/>Classifier<span class="accent">.</span></h1>
         <div class="title-deck">Tabular vetting of NASA Kepler Objects of Interest — a reproducible, leakage-free machine-learning pipeline that decides whether a KOI is a genuine planet candidate or a false positive.</div>
+      </div>
+      <div class="author-stack">
+        <div class="author-portrait">
+          <image-slot id="photo-andersson" shape="circle" placeholder="Drop photo · Andersson"></image-slot>
+          <div class="who"><span class="rl">Author</span><span class="nm">Andersson D.<br/>Sánchez M.</span><span class="ln">@AnderssonProgramming</span></div>
+        </div>
+        <div class="author-portrait">
+          <image-slot id="photo-cristian" shape="circle" placeholder="Drop photo · Cristian"></image-slot>
+          <div class="who"><span class="rl">Author</span><span class="nm">Cristian S.<br/>Pedraza R.</span><span class="ln">@cspedrazar</span></div>
+        </div>
       </div>
     </div>
     <div>
@@ -599,29 +610,61 @@
 <section class="close-slide" data-screen-label="20 Thanks">
   <div class="stars"></div>
   <div class="close-inner">
-    <div>
-      <div class="title-eyebrow">Master's Defense · MLEA_M · 2026-1</div>
-      <h1 class="close-h">Thank<span class="a">.</span><br/>you<span class="a">.</span></h1>
-      <div class="close-deck">Questions, comments, and challenges welcome — especially on threshold policy, leakage handling, and how this classifier would compose with a light-curve CNN.</div>
-    </div>
-    <div class="close-meta">
+    <div class="close-top">
       <div>
-        <div style="color:var(--nasa-orange); font-size:13px; letter-spacing:0.18em; font-weight:600; text-transform:uppercase; margin-bottom:6px;">Authors · email</div>
-        <div style="color:#fff; font-size:18px; line-height:1.5;">andersson.sanchez-m@mail.escuelaing.edu.co<br/>cristian.pedraza-r@mail.escuelaing.edu.co</div>
+        <div class="title-eyebrow">Master's Defense · MLEA_M · 2026-1</div>
+        <h1 class="close-h">Thank<span class="a">.</span><br/>you<span class="a">.</span></h1>
+        <div class="close-deck">Questions, comments, and challenges welcome — especially on threshold policy, leakage handling, and how this classifier would compose with a light-curve CNN.</div>
       </div>
-      <div>
-        <div style="color:var(--nasa-orange); font-size:13px; letter-spacing:0.18em; font-weight:600; text-transform:uppercase; margin-bottom:6px;">Acknowledgements</div>
-        <div style="color:#fff; font-size:18px; line-height:1.5;">NASA Exoplanet Archive · Escuela Colombiana de Ingeniería<br/>Profs. Cañón Ayala &amp; Hortua Orjuela</div>
-      </div>
-      <div style="text-align:right;">
-        <span class="t-badge b-finalist">★ Space Apps 2025 · Global Finalist</span><br/>
-        <span style="display:inline-block; margin-top:10px; color:rgba(255,255,255,0.6); font-size:13px;">May 15, 2026</span>
+      <div class="close-ack">
+        <div class="grp"><div class="lbl">Authors · email</div><div class="val"><span class="mn">andersson.sanchez-m@mail.escuelaing.edu.co</span><br/><span class="mn">cristian.pedraza-r@mail.escuelaing.edu.co</span></div></div>
+        <div class="grp"><div class="lbl">Acknowledgements</div><div class="val">NASA Exoplanet Archive · Escuela Colombiana de Ingeniería<br/>Profs. Cañón Ayala &amp; Hortua Orjuela</div></div>
+        <div><span class="t-badge b-finalist">★ Space Apps 2025 · Global Finalist</span></div>
       </div>
     </div>
+
+    <div class="qr-row">
+      <div class="qr-card">
+        <div class="qr-head"><div class="qr-ico li"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 4.98 8.5 2.5 2.5 0 0 1 4.98 3.5zM3 9.5h4v11H3v-11zm6 0h3.8v1.5h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.15v5.4h-4v-4.8c0-1.14-.02-2.6-1.58-2.6-1.58 0-1.82 1.24-1.82 2.52v4.88H9v-11z"/></svg></div><div><div class="qr-kind">LinkedIn</div><div class="qr-name">Andersson Sánchez</div></div></div>
+        <div class="qr-box" data-qr="https://www.linkedin.com/in/andersson-david-sanchez-mahecha-913703289/"></div>
+        <div class="qr-cap">linkedin.com/in/<br/>andersson-david-sanchez-mahecha</div>
+      </div>
+      <div class="qr-card">
+        <div class="qr-head"><div class="qr-ico li"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 4.98 8.5 2.5 2.5 0 0 1 4.98 3.5zM3 9.5h4v11H3v-11zm6 0h3.8v1.5h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.15v5.4h-4v-4.8c0-1.14-.02-2.6-1.58-2.6-1.58 0-1.82 1.24-1.82 2.52v4.88H9v-11z"/></svg></div><div><div class="qr-kind">LinkedIn</div><div class="qr-name">Cristian Pedraza</div></div></div>
+        <div class="qr-box" data-qr="https://www.linkedin.com/in/cristian-pedraza-r/"></div>
+        <div class="qr-cap">linkedin.com/in/<br/>cristian-pedraza-r</div>
+      </div>
+      <div class="qr-card">
+        <div class="qr-head"><div class="qr-ico gh"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-.99-.02-1.94-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.19-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.82 1.19 3.08 0 4.42-2.7 5.39-5.27 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.15 0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></div><div><div class="qr-kind">GitHub · code</div><div class="qr-name">exoplanet-ml-classifier</div></div></div>
+        <div class="qr-box" data-qr="https://github.com/AnderssonProgramming/exoplanet-ml-classifier"></div>
+        <div class="qr-cap">github.com/AnderssonProgramming/<br/>exoplanet-ml-classifier</div>
+      </div>
+      <div class="qr-card">
+        <div class="qr-head"><div class="qr-ico gh"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-.99-.02-1.94-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.69.08-.69 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .96-.31 3.16 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.19-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.82 1.19 3.08 0 4.42-2.7 5.39-5.27 5.68.41.35.78 1.05.78 2.12 0 1.53-.01 2.77-.01 3.15 0 .31.21.66.79.55C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg></div><div><div class="qr-kind">GitHub · design</div><div class="qr-name">…-design-system</div></div></div>
+        <div class="qr-box" data-qr="https://github.com/AnderssonProgramming/exoplanet-ml-classifier-design-system"></div>
+        <div class="qr-cap">github.com/AnderssonProgramming/<br/>exoplanet-ml-classifier-design-system</div>
+      </div>
+    </div>
+
+    <div class="close-foot"><span>ECI Centauri · Sánchez · Pedraza</span><span>May 15, 2026 · ECI Bogotá</span></div>
   </div>
 </section>
 
 </deck-stage>
 <script src="deck-stage.js"></script>
+<script>
+  // Render every .qr-box[data-qr] via api.qrserver.com (no JS lib needed)
+  (function renderQRs(){
+    document.querySelectorAll('.qr-box[data-qr]').forEach(function(el){
+      var url = el.getAttribute('data-qr');
+      var src = 'https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=4&color=0B3D91&bgcolor=FFFFFF&ecc=M&data=' + encodeURIComponent(url);
+      var img = new Image();
+      img.src = src;
+      img.alt = 'QR for ' + url;
+      el.innerHTML = '';
+      el.appendChild(img);
+    });
+  })();
+</script>
 </body>
 </html>

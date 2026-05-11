@@ -44,9 +44,18 @@ ul.bullets li small { display:block; font-size: 17px; color: var(--fg-3); margin
     radial-gradient(1.6px 1.6px at 22% 90%, #FFD56B, transparent 60%),
     radial-gradient(1.4px 1.4px at 70% 50%, #FFD56B, transparent 60%);
 }
-.title-content { position:relative; z-index:2; padding: 72px 110px 60px; height:100%; box-sizing:border-box; display:flex; flex-direction:column; justify-content: space-between; }
-.title-row { display:flex; align-items:center; gap: 48px; }
-.title-row img { height: 180px; flex:none; filter: drop-shadow(0 8px 32px rgba(0,0,0,0.35)); }
+.title-content { position:relative; z-index:2; padding: 64px 96px 56px; height:100%; box-sizing:border-box; display:flex; flex-direction:column; justify-content: space-between; }
+.title-row { display:flex; align-items:center; gap: 44px; }
+.title-row > img.logo { height: 160px; flex:none; filter: drop-shadow(0 8px 32px rgba(0,0,0,0.35)); }
+
+/* Author portrait slots — round, sit beside the title block */
+.author-stack { display:flex; flex-direction:column; gap: 22px; flex:none; margin-left: 8px; }
+.author-portrait { display:flex; align-items:center; gap: 18px; }
+.author-portrait image-slot { width: 132px; height: 132px; flex:none; box-shadow: 0 6px 24px rgba(0,0,0,0.45), inset 0 0 0 3px var(--nasa-orange); border-radius: 50%; overflow:hidden; }
+.author-portrait .who { display:flex; flex-direction:column; gap: 2px; }
+.author-portrait .nm { font-size: 20px; font-weight: 700; color:#fff; line-height: 1.15; letter-spacing: -0.01em; }
+.author-portrait .rl { font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--nasa-orange); }
+.author-portrait .ln { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px; }
 .title-eyebrow { font-size: 18px; font-weight: 600; letter-spacing: 0.22em; text-transform:uppercase; color: var(--nasa-orange); }
 .title-h { font-size: 76px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.0; margin: 10px 0 14px; max-width: 1300px; color:#fff; }
 .title-h .accent { color: var(--nasa-orange); }
@@ -118,10 +127,30 @@ table.compact td.mono { font-family: var(--font-mono); }
 .close-slide { background: var(--nasa-navy); color:#fff; }
 .close-slide .stars { position:absolute; inset:0; opacity:0.4; pointer-events:none;
   background-image: radial-gradient(1.4px 1.4px at 20% 30%, #fff, transparent 60%), radial-gradient(1.2px 1.2px at 70% 60%, #fff, transparent 60%), radial-gradient(1.0px 1.0px at 50% 80%, #FFD56B, transparent 60%); }
-.close-inner { position:relative; z-index:2; padding: 80px 110px 70px; height:100%; box-sizing:border-box; display:flex; flex-direction:column; justify-content: space-between; }
-.close-h { font-size: 128px; font-weight: 800; letter-spacing: -0.03em; line-height: 0.95; color:#fff; }
+.close-inner { position:relative; z-index:2; padding: 60px 96px 50px; height:100%; box-sizing:border-box; display:flex; flex-direction:column; justify-content: space-between; gap: 28px; }
+.close-top { display:grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: start; }
+.close-h { font-size: 116px; font-weight: 800; letter-spacing: -0.03em; line-height: 0.92; color:#fff; }
 .close-h .a { color: var(--nasa-orange); }
-.close-deck { font-size: 22px; color: rgba(255,255,255,0.8); max-width: 1100px; line-height: 1.5; margin-top: 24px; }
+.close-deck { font-size: 19px; color: rgba(255,255,255,0.82); max-width: 620px; line-height: 1.5; margin-top: 20px; }
+.close-ack { display:flex; flex-direction:column; gap: 18px; padding-top: 14px; }
+.close-ack .grp .lbl { color:var(--nasa-orange); font-size:12px; letter-spacing:0.18em; font-weight:600; text-transform:uppercase; margin-bottom:6px; }
+.close-ack .grp .val { color:#fff; font-size:15px; line-height:1.5; }
+.close-ack .grp .val .mn { font-family: var(--font-mono); font-size: 13px; color: rgba(255,255,255,0.75); }
+
+/* QR strip on closing slide */
+.qr-row { display:grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.qr-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 14px; padding: 16px 16px 14px; display:flex; flex-direction:column; gap:10px; backdrop-filter: blur(6px); }
+.qr-card .qr-head { display:flex; align-items:center; gap: 10px; }
+.qr-card .qr-ico { width: 26px; height: 26px; border-radius: 6px; display:flex; align-items:center; justify-content:center; flex:none; }
+.qr-card .qr-ico.li { background:#0A66C2; color:#fff; }
+.qr-card .qr-ico.gh { background:#fff; color:#0E1116; }
+.qr-card .qr-kind { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--nasa-orange); text-transform: uppercase; font-weight: 600; }
+.qr-card .qr-name { font-size: 16px; font-weight: 700; color:#fff; line-height: 1.2; }
+.qr-card .qr-box { width: 100%; aspect-ratio: 1 / 1; background:#fff; border-radius: 8px; padding: 10px; display:flex; align-items:center; justify-content:center; }
+.qr-card .qr-box svg, .qr-card .qr-box canvas, .qr-card .qr-box img { width:100%; height:100%; display:block; }
+.qr-card .qr-cap { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.65); line-height: 1.35; word-break: break-all; }
+
+.close-foot { display:flex; justify-content: space-between; align-items: flex-end; font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.7); padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.12); }
 .close-meta { display:flex; justify-content: space-between; align-items: flex-end; font-family: var(--font-mono); font-size: 14px; color: rgba(255,255,255,0.7); }
 
 /* PIPELINE STEPS */
