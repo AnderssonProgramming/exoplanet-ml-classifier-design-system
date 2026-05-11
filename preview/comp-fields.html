@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.field { display:flex; flex-direction:column; gap:6px; }
+.field label { font-size: 12px; font-weight: 600; color: var(--fg-2); }
+.input { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--bg-2); font-family: var(--font-sans); font-size:14px; color: var(--fg-1); }
+.input:focus { outline: 3px solid var(--focus-ring); outline-offset:0; border-color: var(--nasa-navy); }
+.helper { font-size: 11px; color: var(--fg-3); }
+.row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Form fields</div>
+  <div class="row">
+    <div class="field">
+      <label>koi_period (days)</label>
+      <input class="input" value="9.488036" />
+      <span class="helper">Orbital period · transit interval</span>
+    </div>
+    <div class="field">
+      <label>koi_prad (R⊕)</label>
+      <input class="input" value="2.26" />
+      <span class="helper">Planetary radius · in Earth radii</span>
+    </div>
+  </div>
+</div>
+</body></html>

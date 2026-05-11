@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Figure slide</title><link rel="stylesheet" href="_slide.css"><style>
+.fig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; flex:1; }
+.fig-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display:flex; flex-direction:column; box-shadow: var(--shadow-2); }
+.fig-card .cap { font-size: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--nasa-navy); margin-bottom: 10px; }
+.fig-card img { width:100%; max-height: 580px; object-fit: contain; }
+.fig-card .note { font-size: 17px; color: var(--fg-3); margin-top: 10px; }
+</style></head><body data-screen-label="14 Visual comparison">
+<div class="slide-stage"><div class="slide">
+  <div class="slide-header">
+    <div class="left"><img src="../assets/eci-centauri-logo.png" alt=""/><span class="crumb">Exoplanet ML Classifier<span class="sep">/</span>Visual comparison</span></div>
+    <div class="meta">14 / 19</div>
+  </div>
+  <div class="slide-body">
+    <div class="slide-eyebrow">Slide 14 · ROC and PR overlays</div>
+    <h1 class="slide-title" style="font-size: 60px; margin-bottom: 28px">XGBoost dominates the convex hull on both curves.</h1>
+    <div class="fig-grid">
+      <div class="fig-card"><div class="cap">ROC overlay · all five models</div><img src="../assets/figures/overlay_roc_curves.png" alt="ROC overlay"/><div class="note">Higher and earlier across the FPR axis — the boost from sequential error correction.</div></div>
+      <div class="fig-card"><div class="cap">Precision–Recall overlay</div><img src="../assets/figures/overlay_pr_curves.png" alt="PR overlay"/><div class="note">PR-AUC ≈ 0.93 · the right curve when missed planets cost more than wasted follow-ups.</div></div>
+    </div>
+  </div>
+  <div class="slide-footer"><span>Sánchez · Pedraza · ECI · MLEA_M 2026-1</span><span>reports/figures/ · sns whitegrid · 150 dpi</span></div>
+</div></div>
+</body></html>

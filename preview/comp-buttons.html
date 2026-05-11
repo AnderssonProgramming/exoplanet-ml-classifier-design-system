@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.btn { display:inline-flex; align-items:center; gap:8px; padding: 10px 16px; border-radius: 8px; font-family: var(--font-sans); font-weight:600; font-size: 14px; line-height:1; border: 1px solid transparent; cursor:pointer; transition: all 160ms; }
+.btn:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
+.btn-primary { background: var(--nasa-navy); color:#fff; }
+.btn-primary:hover { background: var(--nasa-navy-800); }
+.btn-accent  { background: var(--nasa-orange); color: var(--fg-on-orange); }
+.btn-accent:hover  { background: var(--nasa-orange-700); }
+.btn-secondary { background: var(--bg-2); color: var(--nasa-navy); border-color: var(--border-strong); }
+.btn-secondary:hover { background: var(--bg-3); }
+.btn-ghost { background: transparent; color: var(--nasa-navy); }
+.btn-ghost:hover { background: var(--nasa-navy-050); }
+.btn-disabled { background: var(--bg-3); color: var(--fg-4); cursor: not-allowed; }
+.row-tight { display:flex; gap:8px; flex-wrap: wrap; }
+.tier { display:flex; gap:8px; align-items:center; }
+.tier .lbl { width: 78px; font-size: 11px; color: var(--fg-3); font-family: var(--font-mono); }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Buttons</div>
+  <div class="tier"><span class="lbl">Primary</span><button class="btn btn-primary">Run pipeline</button><button class="btn btn-primary">Default</button><button class="btn btn-primary" style="background:var(--nasa-navy-800)">Hover</button></div>
+  <div class="tier"><span class="lbl">Accent</span><button class="btn btn-accent">Predict KOI</button><button class="btn btn-accent" style="background:var(--nasa-orange-700)">Hover</button></div>
+  <div class="tier"><span class="lbl">Secondary</span><button class="btn btn-secondary">View notebook</button><button class="btn btn-ghost">Cancel</button><button class="btn btn-disabled">Disabled</button></div>
+</div>
+</body></html>

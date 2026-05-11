@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.r { display:flex; flex-direction:column; align-items:center; gap:6px; flex:1; }
+.r .box { width:90px; height:60px; background: var(--bg-2); border:1px solid var(--border); }
+.r .label { font-family: var(--font-mono); font-size:11px; color: var(--fg-3); }
+.r .label b { color: var(--fg-1); font-weight:600; }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Radii — restrained, scientific</div>
+  <div style="display:flex; gap:10px">
+    <div class="r"><div class="box" style="border-radius:2px"></div><div class="label"><b>xs</b> · 2px<br/>tags, hairline</div></div>
+    <div class="r"><div class="box" style="border-radius:4px"></div><div class="label"><b>sm</b> · 4px<br/>code, chip</div></div>
+    <div class="r"><div class="box" style="border-radius:8px"></div><div class="label"><b>md</b> · 8px<br/>default card</div></div>
+    <div class="r"><div class="box" style="border-radius:12px"></div><div class="label"><b>lg</b> · 12px<br/>panel</div></div>
+    <div class="r"><div class="box" style="border-radius:20px"></div><div class="label"><b>xl</b> · 20px<br/>hero</div></div>
+    <div class="r"><div class="box" style="border-radius:999px"></div><div class="label"><b>pill</b><br/>badges, tabs</div></div>
+  </div>
+</div>
+</body></html>

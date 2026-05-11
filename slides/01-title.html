@@ -1,0 +1,66 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Title slide</title><link rel="stylesheet" href="_slide.css"><style>
+.title-slide { background: var(--nasa-navy); color: #fff; }
+.starfield {
+  position: absolute; inset:0; pointer-events:none; opacity:0.55;
+  background-image:
+    radial-gradient(1.4px 1.4px at 12% 18%, #fff, transparent 60%),
+    radial-gradient(1.2px 1.2px at 30% 70%, #fff, transparent 60%),
+    radial-gradient(1.6px 1.6px at 78% 22%, #fff, transparent 60%),
+    radial-gradient(1.0px 1.0px at 60% 84%, #fff, transparent 60%),
+    radial-gradient(1.0px 1.0px at 88% 60%, #fff, transparent 60%),
+    radial-gradient(1.4px 1.4px at 6%  56%, #fff, transparent 60%),
+    radial-gradient(1.0px 1.0px at 44% 32%, #fff, transparent 60%),
+    radial-gradient(1.6px 1.6px at 22% 90%, #FFD56B, transparent 60%),
+    radial-gradient(1.4px 1.4px at 70% 50%, #FFD56B, transparent 60%);
+}
+.title-slide .grain {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(251,140,0,0.18), transparent 55%),
+              radial-gradient(ellipse at bottom left, rgba(11,61,145,0.6), transparent 60%);
+}
+.title-content {
+  position: relative; z-index: 2; padding: 120px 120px 96px;
+  height: 100%; display:flex; flex-direction: column; justify-content: space-between;
+}
+.title-row { display:flex; align-items:center; gap: 64px; }
+.title-row img { height: 280px; flex: none; }
+.title-eyebrow { font-size: 24px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--nasa-orange); }
+.title-h { font-size: 110px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.0; margin: 18px 0 24px; max-width: 1300px; }
+.title-h .accent { color: var(--nasa-orange); }
+.title-deck { font-size: 32px; color: rgba(255,255,255,0.85); max-width: 1100px; line-height: 1.4; }
+.title-meta { display:flex; gap: 64px; align-items: flex-end; }
+.title-meta .col { display:flex; flex-direction: column; gap: 4px; }
+.title-meta .lbl { font-size: 14px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--nasa-orange); }
+.title-meta .val { font-size: 22px; color: #fff; line-height: 1.3; }
+.title-meta .val small { color: rgba(255,255,255,0.7); font-size: 16px; display:block; }
+.badge-row { display:flex; gap: 12px; }
+.title-badge { display:inline-flex; align-items:center; gap:8px; padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; }
+.b-finalist { background: var(--nasa-orange); color: #1A1306; }
+.b-course { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+</style></head><body data-screen-label="01 Title">
+<div class="slide-stage"><div class="slide title-slide">
+  <div class="grain"></div>
+  <div class="starfield"></div>
+  <div class="title-content">
+    <div class="title-row">
+      <img src="../assets/eci-centauri-logo.png" alt="ECI Centauri"/>
+      <div>
+        <div class="title-eyebrow">Master's Defense · MLEA_M · 2026-1</div>
+        <h1 class="title-h">Exoplanet ML Classifier<br/><span class="accent">— Tabular vetting of NASA KOIs</span></h1>
+        <div class="title-deck">A reproducible, course-grade machine-learning pipeline that decides whether a Kepler Object of Interest is a genuine exoplanet candidate or a false positive.</div>
+      </div>
+    </div>
+    <div>
+      <div class="badge-row" style="margin-bottom: 36px">
+        <span class="title-badge b-finalist">★ NASA Space Apps 2025 · Global Finalist</span>
+        <span class="title-badge b-course">Maestría en Ciencia de Datos · ECI</span>
+      </div>
+      <div class="title-meta">
+        <div class="col"><span class="lbl">Authors</span><span class="val">Andersson D. Sánchez M.<small>Cristian S. Pedraza R.</small></span></div>
+        <div class="col"><span class="lbl">Advisors</span><span class="val">Mario J. Cañón A.<small>Hector J. Hortua O.</small></span></div>
+        <div class="col"><span class="lbl">Date · Venue</span><span class="val">May 15, 2026<small>Escuela Colombiana de Ingeniería Julio Garavito</small></span></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+</body></html>

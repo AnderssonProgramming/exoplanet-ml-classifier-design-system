@@ -1,0 +1,206 @@
+/* ============================================================
+   ECI Centauri — Exoplanet ML Classifier
+   Color & Type Foundations
+   ============================================================ */
+
+/* Inter (clean sans-serif) + JetBrains Mono (code/data) + KaTeX-friendly serif */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------------------------------------------------------
+     CORE PALETTE — anchored to NASA mission graphics
+     --------------------------------------------------------- */
+  --nasa-navy:      #0B3D91;   /* primary brand */
+  --nasa-navy-700:  #0A357F;
+  --nasa-navy-800:  #082A66;
+  --nasa-navy-900:  #051A40;
+  --nasa-navy-300:  #5778C4;
+  --nasa-navy-200:  #94AADD;
+  --nasa-navy-100:  #D7E0F2;
+  --nasa-navy-050:  #EDF2FB;
+
+  --nasa-orange:    #FB8C00;   /* accent — matches the planet in the logo */
+  --nasa-orange-700:#E07A00;
+  --nasa-orange-300:#FFB04D;
+  --nasa-orange-100:#FFE4C2;
+  --nasa-orange-050:#FFF4E5;
+
+  /* Neutrals — near-white background spec'd for high contrast on a projector */
+  --bg:             #FAFAFA;
+  --bg-alt:         #F2F4F8;
+  --bg-paper:       #FFFFFF;
+  --ink:            #0E1116;
+  --ink-2:          #2A3142;
+  --ink-3:          #5A6478;
+  --ink-4:          #8A93A6;
+  --line:           #E1E5EC;
+  --line-strong:    #C8CFD9;
+
+  /* Semantic — for plots, confusion matrix, classification states */
+  --signal-positive:#2196F3;   /* CANDIDATE class (matches viz.py) */
+  --signal-negative:#FF5722;   /* FALSE POSITIVE class (matches viz.py) */
+  --signal-good:    #2E7D32;
+  --signal-warn:    #F57F17;
+  --signal-bad:     #C62828;
+  --signal-info:    var(--nasa-navy);
+
+  /* Star-field / cosmos accents (use sparingly on dark sections) */
+  --cosmos-deep:    #051A40;
+  --cosmos-mid:     #0B3D91;
+  --star-warm:      #FFD56B;
+  --star-cool:      #94AADD;
+
+  /* ---------------------------------------------------------
+     SEMANTIC TOKENS
+     --------------------------------------------------------- */
+  --fg-1: var(--ink);          /* primary text */
+  --fg-2: var(--ink-2);         /* secondary text */
+  --fg-3: var(--ink-3);         /* tertiary / captions */
+  --fg-4: var(--ink-4);         /* disabled / hairline label */
+  --fg-on-navy: #FFFFFF;
+  --fg-on-orange: #1A1306;
+
+  --bg-1: var(--bg);            /* page */
+  --bg-2: var(--bg-paper);      /* card */
+  --bg-3: var(--bg-alt);        /* sunken */
+  --bg-brand: var(--nasa-navy);
+  --bg-brand-soft: var(--nasa-navy-050);
+  --bg-accent: var(--nasa-orange);
+  --bg-accent-soft: var(--nasa-orange-050);
+
+  --border: var(--line);
+  --border-strong: var(--line-strong);
+  --focus-ring: rgba(11, 61, 145, 0.35);
+
+  /* ---------------------------------------------------------
+     TYPOGRAPHY
+     --------------------------------------------------------- */
+  --font-sans:    'Inter', 'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-math:    'Latin Modern Math', 'STIX Two Math', 'Cambria Math', Georgia, serif;
+
+  /* Type scale — designed for 1920×1080 slide canvas + readable defense docs */
+  --fs-display:   72px;   /* slide hero */
+  --fs-h1:        56px;   /* slide title */
+  --fs-h2:        40px;
+  --fs-h3:        28px;
+  --fs-h4:        22px;
+  --fs-body:      18px;
+  --fs-body-lg:   20px;
+  --fs-small:     15px;
+  --fs-micro:     12px;
+  --fs-eyebrow:   13px;   /* uppercase label */
+
+  --lh-tight:     1.10;
+  --lh-snug:      1.25;
+  --lh-normal:    1.45;
+  --lh-relaxed:   1.6;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;
+  --tracking-eyebrow: 0.14em;
+
+  --weight-light:  300;
+  --weight-reg:    400;
+  --weight-med:    500;
+  --weight-semi:   600;
+  --weight-bold:   700;
+  --weight-black:  800;
+
+  /* ---------------------------------------------------------
+     SPACING / RADII / SHADOW / Z
+     --------------------------------------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+  --space-9:  96px;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  --shadow-1: 0 1px 2px rgba(11, 26, 64, 0.05), 0 1px 1px rgba(11, 26, 64, 0.04);
+  --shadow-2: 0 2px 6px rgba(11, 26, 64, 0.06), 0 1px 2px rgba(11, 26, 64, 0.04);
+  --shadow-3: 0 8px 24px rgba(11, 26, 64, 0.08), 0 2px 6px rgba(11, 26, 64, 0.04);
+  --shadow-4: 0 18px 48px rgba(11, 26, 64, 0.12), 0 4px 12px rgba(11, 26, 64, 0.05);
+  --shadow-inset: inset 0 0 0 1px rgba(11, 26, 64, 0.06);
+
+  --duration-fast:   120ms;
+  --duration-base:   200ms;
+  --duration-slow:   320ms;
+  --ease-standard:   cubic-bezier(0.2, 0.0, 0.0, 1);
+  --ease-emphasis:   cubic-bezier(0.2, 0.0, 0.0, 1.2);
+}
+
+/* ============================================================
+   BASE — element styles
+   ============================================================ */
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg-1);
+  background: var(--bg-1);
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  letter-spacing: var(--tracking-tight);
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--weight-bold);  line-height: var(--lh-tight); }
+h2 { font-size: var(--fs-h2); font-weight: var(--weight-bold);  line-height: var(--lh-tight); }
+h3 { font-size: var(--fs-h3); font-weight: var(--weight-semi);  line-height: var(--lh-snug);  }
+h4 { font-size: var(--fs-h4); font-weight: var(--weight-semi);  line-height: var(--lh-snug);  }
+
+p  { font-size: var(--fs-body); line-height: var(--lh-relaxed); color: var(--fg-2); margin: 0; }
+
+small, .text-small { font-size: var(--fs-small); color: var(--fg-3); }
+.text-eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--weight-semi);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--nasa-navy);
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.94em;
+}
+
+code {
+  background: var(--bg-3);
+  padding: 0.12em 0.35em;
+  border-radius: var(--radius-sm);
+  color: var(--ink-2);
+}
+
+a { color: var(--nasa-navy); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--nasa-navy-800); }
+
+/* ============================================================
+   UTILITY CLASSES — minimal helpers used across cards
+   ============================================================ */
+.brand-navy   { color: var(--nasa-navy); }
+.brand-orange { color: var(--nasa-orange); }
+.bg-navy      { background: var(--nasa-navy); color: #fff; }
+.bg-orange    { background: var(--nasa-orange); color: var(--fg-on-orange); }
+.bg-paper     { background: var(--bg-2); }
+.bg-sunken    { background: var(--bg-3); }
+
+.divider { border: none; border-top: 1px solid var(--border); margin: var(--space-5) 0; }

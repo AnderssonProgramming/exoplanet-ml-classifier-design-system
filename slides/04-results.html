@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Results slide</title><link rel="stylesheet" href="_slide.css"><style>
+.metrics-row { display:flex; gap: 28px; margin-bottom: 36px; }
+.metric { background: var(--bg-2); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; flex:1; box-shadow: var(--shadow-2); }
+.metric.featured { border: 2px solid var(--nasa-orange); background: var(--nasa-orange-050); padding: 27px 31px; }
+.metric .lbl { font-size: 16px; font-weight:600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-3); }
+.metric.featured .lbl { color: var(--nasa-orange-700); }
+.metric .val { font-size: 88px; font-weight: 800; letter-spacing: -0.025em; color: var(--fg-1); line-height: 1; margin-top: 10px; font-feature-settings:'tnum'; }
+.metric .delta { font-family: var(--font-mono); font-size: 18px; color: var(--signal-good); font-weight:600; margin-top: 8px; }
+table.lb { width:100%; border-collapse: collapse; font-size: 22px; background: var(--bg-2); border-radius: 12px; overflow:hidden; box-shadow: var(--shadow-1); }
+table.lb thead th { background: var(--nasa-navy); color:#fff; padding: 14px 20px; text-align:left; font-size:16px; letter-spacing:0.06em; text-transform:uppercase; font-weight:600; }
+table.lb tbody td { padding: 14px 20px; border-top:1px solid var(--border); font-feature-settings:'tnum'; }
+table.lb tbody td.num { text-align:right; font-family: var(--font-mono); }
+table.lb tbody tr.win { background: var(--nasa-orange-050); }
+table.lb tbody tr.win td:first-child { color: var(--nasa-orange-700); font-weight:700; }
+</style></head><body data-screen-label="13 Results · Leaderboard">
+<div class="slide-stage"><div class="slide">
+  <div class="slide-header">
+    <div class="left"><img src="../assets/eci-centauri-logo.png" alt=""/><span class="crumb">Exoplanet ML Classifier<span class="sep">/</span>Results</span></div>
+    <div class="meta">13 / 19</div>
+  </div>
+  <div class="slide-body">
+    <div class="slide-eyebrow">Slide 13 · final test-set leaderboard</div>
+    <h1 class="slide-title" style="font-size: 64px; margin-bottom: 32px">Tuned XGBoost wins all four headline metrics.</h1>
+    <div class="metrics-row">
+      <div class="metric featured"><div class="lbl">F1 (test)</div><div class="val">0.860</div><div class="delta">+0.011 vs RF</div></div>
+      <div class="metric"><div class="lbl">ROC-AUC</div><div class="val">0.936</div><div class="delta">+0.009</div></div>
+      <div class="metric"><div class="lbl">MCC</div><div class="val">0.721</div><div class="delta">+0.022</div></div>
+      <div class="metric"><div class="lbl">Accuracy</div><div class="val">86.0%</div><div class="delta">+1.1 pp</div></div>
+    </div>
+    <table class="lb">
+      <thead><tr><th>Model</th><th style="text-align:right">F1</th><th style="text-align:right">ROC-AUC</th><th style="text-align:right">PR-AUC</th><th style="text-align:right">MCC</th></tr></thead>
+      <tbody>
+        <tr class="win"><td>XGBoost (tuned)</td><td class="num">0.8598</td><td class="num">0.9361</td><td class="num">0.9314</td><td class="num">0.7210</td></tr>
+        <tr><td>Random Forest</td><td class="num">0.8489</td><td class="num">0.9271</td><td class="num">0.9199</td><td class="num">0.6991</td></tr>
+        <tr><td>MLP (tuned)</td><td class="num">0.8189</td><td class="num">0.9006</td><td class="num">0.8828</td><td class="num">0.6404</td></tr>
+        <tr><td>k-NN</td><td class="num">0.7916</td><td class="num">0.8568</td><td class="num">0.8067</td><td class="num">0.5747</td></tr>
+        <tr><td>Logistic Regression</td><td class="num">0.7932</td><td class="num">0.8341</td><td class="num">0.7645</td><td class="num">0.5660</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="slide-footer"><span>Sánchez · Pedraza · ECI · MLEA_M 2026-1</span><span>RANDOM_SEED = 42 · stratified 72/8/20 · F1 scoring on 5-fold CV</span></div>
+</div></div>
+</body></html>

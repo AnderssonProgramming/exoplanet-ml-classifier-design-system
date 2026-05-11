@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+table { border-collapse: collapse; width:100%; font-family: var(--font-sans); font-size: 13px; background: var(--bg-2); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-1); }
+thead th { background: var(--nasa-navy); color: #fff; text-align: left; padding: 10px 12px; font-weight: 600; letter-spacing: 0.04em; font-size: 11px; text-transform:uppercase; }
+tbody td { padding: 10px 12px; border-top: 1px solid var(--border); font-feature-settings:'tnum'; }
+tbody tr.winner { background: var(--nasa-orange-050); }
+tbody tr.winner td:first-child { color: var(--nasa-orange-700); font-weight: 700; }
+tbody td.num { text-align: right; font-family: var(--font-mono); }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Leaderboard table · winning row in orange tint</div>
+  <table>
+    <thead><tr><th>Model</th><th style="text-align:right">F1</th><th style="text-align:right">ROC-AUC</th><th style="text-align:right">MCC</th></tr></thead>
+    <tbody>
+      <tr class="winner"><td>XGBoost (tuned)</td><td class="num">0.8598</td><td class="num">0.9361</td><td class="num">0.7210</td></tr>
+      <tr><td>Random Forest</td><td class="num">0.8489</td><td class="num">0.9271</td><td class="num">0.6991</td></tr>
+      <tr><td>MLP (tuned)</td><td class="num">0.8189</td><td class="num">0.9006</td><td class="num">0.6404</td></tr>
+      <tr><td>Logistic Regression</td><td class="num">0.7932</td><td class="num">0.8341</td><td class="num">0.5660</td></tr>
+      <tr><td>k-NN</td><td class="num">0.7916</td><td class="num">0.8568</td><td class="num">0.5747</td></tr>
+    </tbody>
+  </table>
+</div>
+</body></html>

@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.feat { display:grid; grid-template-columns: 130px 1fr 56px; gap:8px; align-items:center; }
+.feat .name { font-family: var(--font-mono); font-size:12px; color: var(--fg-2); }
+.feat .bar { height: 14px; background: var(--bg-3); border-radius: 4px; overflow:hidden; }
+.feat .fill { height:100%; background: linear-gradient(90deg, var(--nasa-navy), var(--nasa-orange)); border-radius:4px; }
+.feat .val { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); text-align:right; }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Feature importance bar · figure component</div>
+  <div style="display:flex; flex-direction:column; gap:6px">
+    <div class="feat"><span class="name">koi_model_snr</span><span class="bar"><span class="fill" style="width:96%"></span></span><span class="val">0.241</span></div>
+    <div class="feat"><span class="name">koi_prad</span>     <span class="bar"><span class="fill" style="width:74%"></span></span><span class="val">0.187</span></div>
+    <div class="feat"><span class="name">koi_depth</span>    <span class="bar"><span class="fill" style="width:62%"></span></span><span class="val">0.158</span></div>
+    <div class="feat"><span class="name">koi_duration</span> <span class="bar"><span class="fill" style="width:43%"></span></span><span class="val">0.108</span></div>
+    <div class="feat"><span class="name">koi_period</span>   <span class="bar"><span class="fill" style="width:31%"></span></span><span class="val">0.079</span></div>
+    <div class="feat"><span class="name">koi_teq</span>      <span class="bar"><span class="fill" style="width:22%"></span></span><span class="val">0.054</span></div>
+  </div>
+</div>
+</body></html>

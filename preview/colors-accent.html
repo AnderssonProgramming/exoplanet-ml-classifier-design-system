@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.swatch { flex:1; min-height:96px; border-radius:8px; padding:10px 12px; display:flex; flex-direction:column; justify-content:space-between; box-shadow: var(--shadow-1); }
+.swatch .name { font-weight:600; font-size:13px; }
+.swatch .hex { font-family: var(--font-mono); font-size:11px; opacity:0.85; }
+.swatch.dark { color:#fff; }
+.swatch.light { color: var(--ink); }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Brand · Accent — matches the planet in the logo</div>
+  <div class="row">
+    <div class="swatch dark" style="background:#E07A00"><span class="name">Orange 700</span><span class="hex">#E07A00</span></div>
+    <div class="swatch dark" style="background:#FB8C00; flex:1.6"><span class="name">NASA Orange ★</span><span class="hex">#FB8C00 — accent</span></div>
+    <div class="swatch light" style="background:#FFB04D"><span class="name">Orange 300</span><span class="hex">#FFB04D</span></div>
+    <div class="swatch light" style="background:#FFE4C2"><span class="name">Orange 100</span><span class="hex">#FFE4C2</span></div>
+    <div class="swatch light" style="background:#FFF4E5; box-shadow: inset 0 0 0 1px var(--border)"><span class="name">Orange 050</span><span class="hex">#FFF4E5</span></div>
+  </div>
+  <div class="muted" style="font-size:12px">Accent only — never appears alongside the navy at full saturation in the same block.</div>
+</div>
+</body></html>

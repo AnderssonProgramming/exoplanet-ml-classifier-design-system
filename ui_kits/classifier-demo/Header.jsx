@@ -1,0 +1,24 @@
+function Header() {
+  return (
+    <header className="hdr">
+      <div className="hdr-l">
+        <img src="../../assets/eci-centauri-logo.png" alt="ECI Centauri" className="hdr-logo"/>
+        <div className="hdr-titles">
+          <div className="hdr-name">Exoplanet ML Classifier</div>
+          <div className="hdr-sub">KOI vetting · MLEA_M · 2026-1</div>
+        </div>
+      </div>
+      <nav className="hdr-r">
+        <a className="hdr-tab active" href="#">Predict</a>
+        <a className="hdr-tab" href="#">Leaderboard</a>
+        <a className="hdr-tab" href="#">Notebook</a>
+        <span className="hdr-badge">★ NASA Space Apps 2025 · Global Finalist</span>
+        <a className="hdr-repo" href="#" title="Repository">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3M15 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 5.07 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 5.07a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/></svg>
+          <span>github</span>
+        </a>
+      </nav>
+    </header>
+  );
+}
+window.Header = Header;

@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.callout { background: var(--bg-2); border:1px solid var(--border); border-radius: 10px; padding: 14px 16px; display:flex; gap:12px; align-items:flex-start; box-shadow: var(--shadow-1); }
+.callout .icon { width: 28px; height:28px; border-radius:6px; background: var(--nasa-navy-050); color: var(--nasa-navy); display:grid; place-items:center; font-weight:700; flex:none; }
+.callout.warn .icon { background: var(--nasa-orange-050); color: var(--nasa-orange-700); }
+.callout .title { font-weight: 600; font-size: 14px; color: var(--fg-1); }
+.callout .body { font-size: 13px; color: var(--fg-2); margin-top: 2px; line-height: 1.5; }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Callouts · info + warning</div>
+  <div class="callout">
+    <div class="icon">i</div>
+    <div><div class="title">Pipeline assumption</div><div class="body">Imputer + scaler are fit on the training fold only — guards against test-set leakage during cross-validation.</div></div>
+  </div>
+  <div class="callout warn">
+    <div class="icon">!</div>
+    <div><div class="title">Leakage trap</div><div class="body">Keeping <code>koi_score</code> or <code>koi_fpflag_*</code> yields F1 ≈ 0.99 — and a model that does nothing useful in production.</div></div>
+  </div>
+</div>
+</body></html>

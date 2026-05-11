@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.cm { display:grid; grid-template-columns: auto repeat(2, 1fr); grid-template-rows: auto repeat(2, 1fr); gap: 2px; width: 320px; font-family: var(--font-sans); }
+.cm .corner { background: transparent; }
+.cm .h { background: var(--bg-3); padding: 6px 8px; font-size: 11px; font-weight: 600; color: var(--fg-2); text-align: center; letter-spacing: 0.06em; text-transform: uppercase; }
+.cm .h.row { writing-mode: vertical-rl; transform: rotate(180deg); padding: 8px 4px; min-height: 60px; }
+.cm .cell { aspect-ratio: 2/1; padding: 12px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-radius: 4px; }
+.cm .cell .v { font-family: var(--font-mono); font-size: 22px; font-weight:700; line-height:1; }
+.cm .cell .s { font-size: 10px; opacity:0.85; margin-top:3px; }
+.tp { background:#0B3D91; color:#fff; }
+.tn { background:#0B3D91; color:#fff; }
+.fp { background:#FFE4C2; color:#7A3B00; }
+.fn { background:#FFE4C2; color:#7A3B00; }
+.legend { display:flex; gap:14px; align-items:center; font-size:12px; color: var(--fg-3); }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Confusion matrix · classification component</div>
+  <div style="display:flex; gap:18px; align-items:center">
+    <div class="cm">
+      <div class="corner"></div>
+      <div class="h">Pred · neg</div>
+      <div class="h">Pred · pos</div>
+      <div class="h row">Actual · neg</div>
+      <div class="cell tn"><div class="v">842</div><div class="s">TN</div></div>
+      <div class="cell fp"><div class="v">128</div><div class="s">FP</div></div>
+      <div class="h row">Actual · pos</div>
+      <div class="cell fn"><div class="v">124</div><div class="s">FN</div></div>
+      <div class="cell tp"><div class="v">819</div><div class="s">TP</div></div>
+    </div>
+    <div class="legend"><div>Default threshold 0.50<br/>XGBoost · test split<br/>F1 = 0.860</div></div>
+  </div>
+</div>
+</body></html>

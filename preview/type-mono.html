@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+pre { background: var(--bg-3); color: var(--ink-2); padding: 12px 14px; border-radius: 8px; font-family: var(--font-mono); font-size: 13px; line-height: 1.55; margin: 0; border: 1px solid var(--border); }
+.kw { color: var(--nasa-navy); font-weight: 600; }
+.str { color: #C62828; }
+.num { color: var(--nasa-orange-700); }
+.cm { color: var(--fg-3); font-style: italic; }
+</style></head><body>
+<div class="card-stack">
+  <div class="eyebrow">Mono · JetBrains Mono — code &amp; numerics</div>
+<pre><span class="cm"># XGBoost — tuned configuration (best on F1)</span>
+<span class="kw">from</span> xgboost <span class="kw">import</span> XGBClassifier
+clf = XGBClassifier(
+    n_estimators=<span class="num">200</span>, max_depth=<span class="num">7</span>,
+    learning_rate=<span class="num">0.05</span>, subsample=<span class="num">0.8</span>,
+    random_state=<span class="num">42</span>, eval_metric=<span class="str">"logloss"</span>,
+)</pre>
+  <div class="muted mono" style="font-size:11px">13–14px in tables · 16–18px on slides · ligatures off for digit alignment</div>
+</div>
+</body></html>
