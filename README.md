@@ -4,7 +4,7 @@
 
 ```text
  ╔═══════════════════════════════════════════════════════════════════╗
- ║   N A V Y   ·  # 0 B 3 D 9 1        O R A N G E  ·  # F B 8 C 0 0  ║
+ ║   N A V Y   ·  # 0 B 3 D 9 1        O R A N G E  ·  # F B 8 C 0 0 ║
  ╚═══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -53,11 +53,11 @@ This is a **complete, self-contained design system**, not a library, not a style
 | Layer | What you get |
 |---|---|
 | 🎨 **Tokens** | A single [`colors_and_type.css`](colors_and_type.css) with the full palette, the typographic scale, spacing, radii, shadows and motion. **All design decisions live in CSS variables**, so swapping the palette swaps the deck, the paper figures and the demo in one move. |
-| 🧩 **Components** | 13 self-contained HTML/CSS components in [`preview/`](preview/) — every metric tile, equation card, leaderboard table, confusion-matrix glyph and badge used in the project. |
+| 🧩 **Components** | 13 self-contained HTML/CSS components in [`preview/`](preview/) with every metric tile, equation card, leaderboard table, confusion-matrix glyph and badge used in the project. |
 | 🎬 **Slides** | A 20-slide [`deck/`](deck/) with a custom `<deck-stage>` element, full-bleed `1920×1080` canvas, KaTeX equations, lazy QR codes and zero dependencies beyond two CDNs. |
-| 🛰 **UI Kit** | A working React [`ui_kits/classifier-demo/`](ui_kits/classifier-demo/) that recreates the *predict-a-KOI* demo using a deterministic mock model — instant audience interaction without serving the joblib. |
+| 🛰 **UI Kit** | A working React [`ui_kits/classifier-demo/`](ui_kits/classifier-demo/) that recreates the *predict-a-KOI* demo using a deterministic mock model and an instant audience interaction without serving the joblib. |
 
-Everything is **pure HTML/CSS/JS** — no build step, no `npm install` (the React kit is the one exception, and ships with its own README). Drop the folder on a static host and ship.
+Everything is **pure HTML/CSS/JS**, no build step, no `npm install` (the React kit is the one exception, and ships with its own README). Drop the folder on a static host and ship.
 
 ---
 
@@ -67,7 +67,7 @@ Because the project is being presented in front of **two professors and students
 
 1. **Two brand colours, never both saturated at once.** NASA navy `#0B3D91` is the primary surface; NASA orange `#FB8C00` is the accent. Neutrals run from `#0E1116` ink to `#FAFAFA` page. The plot semantics (`#2196F3` positive class, `#FF5722` negative) match the codebase's `src/visualization.py` so the deck, the paper and the matplotlib figures all read as one publication.
 2. **Honest copy, no hype.** *"Lowering the threshold trades a small precision loss for a meaningful recall gain"*, not *"revolutionary AI breakthrough"*. The voice is restrained, scientifically rigorous and free of marketing words.
-3. **Projector-ready on the first slide.** `#FAFAFA` near-white background for content slides (chosen for projector contrast), saturated navy for title/closing/section dividers (with a faint orange wash and a sparse star-field built from radial gradients — no photographic backgrounds that smear on cheap projectors).
+3. **Projector-ready on the first slide.** `#FAFAFA` near-white background for content slides (chosen for projector contrast), saturated navy for title/closing/section dividers (with a faint orange wash and a sparse star-field built from radial gradients, no photographic backgrounds that smear on cheap projectors).
 
 ---
 
@@ -210,7 +210,7 @@ Four soft levels tinted with navy at 5–12 % alpha (`0 8px 24px rgba(11,26,64,0
 
 ## 🧩 What's in the deck — slide-by-slide map
 
-The deck is the system's flagship deliverable. 20 slides, ≤ 12 minutes, designed to fill an entire IEEE master's presentation slot.
+The deck is the system's flagship deliverable. 20 slides, designed to fill an entire IEEE master's presentation slot.
 
 | # | Slide | Hero element | Layout pattern |
 |--:|---|---|---|
@@ -254,13 +254,13 @@ A drop-to-fill image placeholder with:
 - **side-car persistence** to `.image-slots.state.json` so dropped images survive reload / share-link / PPTX export
 - **session-only fallback** when no `id` is supplied (still usable, just doesn't persist)
 
-You don't need it for slide 1 — the deck already uses static `<img>` for the author photos — but it's there for future reuse in any image-driven component you want to add.
+You don't need it for slide 1, the deck already uses static `<img>` for the author photos, but it's there for future reuse in any image-driven component you want to add.
 
 ---
 
 ## 🛰 NASA Space Apps heritage
 
-This design system is the polished-and-paper'd descendant of **[Exoplanet Hunter AI](https://www.spaceappschallenge.org/)**, the prototype that team **ECI Centauri** shipped in 48 hours at the **2025 NASA International Space Apps Challenge** and that earned a **Global Finalist** placement — one of the top global submissions worldwide.
+This design system is the polished-and-paper'd descendant of **[Exoplanet Hunter AI](https://www.spaceappschallenge.org/)**, the prototype that team **ECI Centauri** shipped in 48 hours at the **2025 NASA International Space Apps Challenge** and that earned a **Global Finalist** placement as one of the top global submissions worldwide.
 
 | Hackathon component | Repository |
 |---|---|
@@ -291,7 +291,7 @@ The hackathon system answered *"can we build something that triages KOIs in 48 h
 The system was extracted from the codebase: a couple of things had to be substituted because no canonical asset existed:
 
 - **Fonts.** The codebase shipped no font files. The system loads **Inter** + **JetBrains Mono** from Google Fonts as the closest licensed match for *"Inter or Helvetica."* Drop your purchased Inter or Helvetica into `fonts/` and update the `@import` at the top of `colors_and_type.css` to swap.
-- **Icons.** The codebase ships no icon system; the deck and previews use a hand-picked set of inline SVGs in the style of **[Lucide](https://lucide.dev)** (1.6-px stroke, 24-px grid). Swap to Phosphor or Heroicons if preferred — every icon is a small inline `<svg>` so a project-wide swap is a find-and-replace.
+- **Icons.** The codebase ships no icon system; the deck and previews use a hand-picked set of inline SVGs in the style of **[Lucide](https://lucide.dev)** (1.6-px stroke, 24-px grid). Swap to Phosphor or Heroicons if preferred, it shows that every icon is a small inline `<svg>` so a project-wide swap is a find-and-replace.
 
 ---
 
@@ -316,7 +316,7 @@ If you build on this design system, please cite:
 
 <div align="center">
 
-### 🪐 Built for a 12-minute presentation. Engineered for anyone who has to give one next.
+### 🪐 Built for a presentation. Engineered for anyone who has to give one next.
 
 <sub>NASA navy · NASA orange · one accent at a time · honest copy · projector-ready · zero dependencies</sub>
 
