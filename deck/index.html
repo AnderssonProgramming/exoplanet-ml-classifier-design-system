@@ -136,7 +136,7 @@
       <div class="card">
         <div class="ch">False-positive type · 1</div>
         <div class="ct">Eclipsing binary stars</div>
-        <div class="cd">Two stars orbiting each other dim periodically in a way that looks identical to a planetary transit at first glance — the single largest contaminant.</div>
+        <div class="cd">Two stars orbiting each other dim periodically in a way that looks identical to a planetary transit at first glance: the single largest contaminant.</div>
       </div>
       <div class="card">
         <div class="ch">False-positive type · 2</div>
@@ -146,7 +146,7 @@
       <div class="card">
         <div class="ch">False-positive type · 3</div>
         <div class="ct">Stellar variability</div>
-        <div class="cd">Starspots, flares, and pulsations modulate brightness on planet-like timescales — easy to confuse with a transiting body.</div>
+        <div class="cd">Starspots, flares, and pulsations modulate brightness on planet-like timescales: easy to confuse with a transiting body.</div>
       </div>
     </div>
   </div>
@@ -171,7 +171,7 @@
             <tr><td><b>Split</b></td><td>Stratified 72 / 8 / 20 (train / val / test) · seed = 42</td></tr>
           </tbody>
         </table>
-        <div class="pull"><b>Balanced classes</b> let metrics speak honestly — SMOTE is available but not required.</div>
+        <div class="pull"><b>Balanced classes</b> let metrics speak honestly: SMOTE is available but not required.</div>
       </div>
       <div class="col">
         <div class="card">
@@ -233,26 +233,26 @@
       <div class="col">
         <div class="leak-group">
           <div class="leak-group-h">Type 1 · Label leakage &middot; 3 columns</div>
-          <div class="leak-row"><div class="k">koi_disposition</div><div class="v">The label itself, in another disguise — perfect leakage.</div></div>
-          <div class="leak-row"><div class="k">koi_score</div><div class="v">NASA's own confidence score for the label — a sibling target.</div></div>
-          <div class="leak-row"><div class="k">koi_comment</div><div class="v">Free-text human notes — often state the label outright.</div></div>
+          <div class="leak-row"><div class="k">koi_disposition</div><div class="v">The label itself, in another disguise: perfect leakage.</div></div>
+          <div class="leak-row"><div class="k">koi_score</div><div class="v">NASA's own confidence score for the label: a sibling target.</div></div>
+          <div class="leak-row"><div class="k">koi_comment</div><div class="v">Free-text human notes: often state the label outright.</div></div>
         </div>
         <div class="leak-group">
           <div class="leak-group-h">Type 2 · Target-defining flags &middot; 4 columns</div>
-          <div class="leak-row"><div class="k">koi_fpflag_nt</div><div class="v">"Not transit-like" — a heuristic that <i>defines</i> the label.</div></div>
-          <div class="leak-row"><div class="k">koi_fpflag_ss</div><div class="v">"Stellar eclipse" flag — same family of leakage.</div></div>
-          <div class="leak-row"><div class="k">koi_fpflag_co</div><div class="v">"Centroid offset" flag — pre-vetting decision baked in.</div></div>
-          <div class="leak-row"><div class="k">koi_fpflag_ec</div><div class="v">"Ephemeris contamination" — likewise.</div></div>
+          <div class="leak-row"><div class="k">koi_fpflag_nt</div><div class="v">"Not transit-like": a heuristic that <i>defines</i> the label.</div></div>
+          <div class="leak-row"><div class="k">koi_fpflag_ss</div><div class="v">"Stellar eclipse" flag: same family of leakage.</div></div>
+          <div class="leak-row"><div class="k">koi_fpflag_co</div><div class="v">"Centroid offset" flag: pre-vetting decision baked in.</div></div>
+          <div class="leak-row"><div class="k">koi_fpflag_ec</div><div class="v">"Ephemeris contamination": likewise.</div></div>
         </div>
         <div class="leak-group">
           <div class="leak-group-h">Type 3 · Identifier leakage &middot; 3 columns</div>
-          <div class="leak-row"><div class="k">kepid · kepoi_name · kepler_name</div><div class="v">Identifiers correlate with catalog order &amp; vetting date — rank predicts disposition.</div></div>
+          <div class="leak-row"><div class="k">kepid · kepoi_name · kepler_name</div><div class="v">Identifiers correlate with catalog order &amp; vetting date: rank predicts disposition.</div></div>
         </div>
       </div>
       <div class="col center-y">
         <div class="card featured">
           <div class="ch">Take-away</div>
-          <div class="ct">Keeping these gives F1 ≈ 0.99 — and you've learned nothing.</div>
+          <div class="ct">Keeping these gives F1 ≈ 0.99, and you've learned nothing.</div>
           <div class="cd">A leakage-free pipeline is the difference between a model that <b>generalizes</b> and a model that <b>memorizes vetting history</b>. We enforce removal in <span class="mono">src/constants.LEAKAGE_COLUMNS</span> so the drop is reproducible and version-controlled.</div>
         </div>
         <div class="metric-row" style="grid-template-columns:1fr 1fr;">
@@ -279,11 +279,11 @@
     <div class="g-2" style="gap:24px;">
       <div class="fig">
         <div class="frame"><img src="../assets/figures/target_distribution.png" alt="Target distribution"/></div>
-        <div class="cap"><b>≈ 50 / 50 split</b> — no class-imbalance compensation needed.</div>
+        <div class="cap"><b>≈ 50 / 50 split</b> : no class-imbalance compensation needed.</div>
       </div>
       <div class="fig">
         <div class="frame"><img src="../assets/figures/correlation_heatmap.png" alt="Correlation heatmap"/></div>
-        <div class="cap">koi_teq ↔ koi_insol are <b>near-collinear</b> (r ≈ 1) — physically the same quantity.</div>
+        <div class="cap">koi_teq ↔ koi_insol are <b>near-collinear</b> (r ≈ 1) : physically the same quantity.</div>
       </div>
     </div>
     <div class="pull" style="margin-top:18px;">Insight → tree-based models will be <b>robust</b> to the redundancy; linear models will need standard-scaled inputs to converge.</div>
@@ -304,7 +304,7 @@
       </div>
       <div class="fig">
         <div class="frame"><img src="../assets/figures/kmeans_pca.png" alt="K-Means on PCA"/></div>
-        <div class="cap"><b>K-Means (k=2)</b> only loosely tracks labels — confirming supervision is needed.</div>
+        <div class="cap"><b>K-Means (k=2)</b> only loosely tracks labels : confirming supervision is needed.</div>
       </div>
     </div>
     <div class="pull" style="margin-top:18px;">Take-away → <b>linear baseline ≈ 0.78–0.79 F1</b>; non-linear ensembles &amp; kernels should close the gap.</div>
@@ -337,12 +337,12 @@
       <div class="card featured">
         <div class="ch">Why this order</div>
         <div class="ct">Imputer and scaler live inside the same Pipeline</div>
-        <div class="cd">5-fold cross-validation refits the imputer + scaler on each training fold — so the model never sees test-set statistics. This is the difference between a <b>defensible result</b> and a <b>hidden leak</b>, and it is the single most overlooked source of silent overfitting in tabular ML.</div>
+        <div class="cd">5-fold cross-validation refits the imputer + scaler on each training fold, so the model never sees test-set statistics. This is the difference between a <b>defensible result</b> and a <b>hidden leak</b>, and it is the single most overlooked source of silent overfitting in tabular ML.</div>
         <div class="pipe-checks">
-          <div class="pipe-check bad"><span class="mk">✗</span><span><b>Impute on the full dataset</b> — test medians leak into the training median.</span></div>
-          <div class="pipe-check bad"><span class="mk">✗</span><span><b>Scale before the split</b> — z-score uses test mean &amp; standard deviation.</span></div>
-          <div class="pipe-check bad"><span class="mk">✗</span><span><b>Call transformers manually</b> — CV folds can't re-fit them.</span></div>
-          <div class="pipe-check good"><span class="mk">✓</span><span><b>Wrap in <span class="mono">Pipeline()</span></b> — every CV fold refits both transformers from scratch.</span></div>
+          <div class="pipe-check bad"><span class="mk">✗</span><span><b>Impute on the full dataset</b> : test medians leak into the training median.</span></div>
+          <div class="pipe-check bad"><span class="mk">✗</span><span><b>Scale before the split</b> : z-score uses test mean &amp; standard deviation.</span></div>
+          <div class="pipe-check bad"><span class="mk">✗</span><span><b>Call transformers manually</b> : CV folds can't re-fit them.</span></div>
+          <div class="pipe-check good"><span class="mk">✓</span><span><b>Wrap in <span class="mono">Pipeline()</span></b> : every CV fold refits both transformers from scratch.</span></div>
         </div>
       </div>
       <div class="card dark">
@@ -386,7 +386,7 @@
         <div class="eq-footer">
           <div class="eq-footer-h">Role in our zoo</div>
           <ul class="eq-footer-list">
-            <li>Standalone classifier — test F<sub>1</sub> = <b>0.793</b></li>
+            <li>Standalone classifier : test F<sub>1</sub> = <b>0.793</b></li>
             <li>Sign of $\boldsymbol{\beta}$ is the LR ↔ XGBoost cross-check (slide 16)</li>
             <li>Trained with L<sub>2</sub> regularisation, <span class="mono">solver = lbfgs</span></li>
           </ul>
@@ -399,9 +399,9 @@
         <div class="eq-footer">
           <div class="eq-footer-h">How each model minimises it</div>
           <ul class="eq-footer-list">
-            <li><b>LR</b> — Newton's method via <span class="mono">lbfgs</span>, exact</li>
-            <li><b>MLP</b> — back-propagation with Adam, mini-batch SGD</li>
-            <li><b>XGBoost</b> — 2nd-order Taylor expansion at each boost step</li>
+            <li><b>LR</b> : Newton's method via <span class="mono">lbfgs</span>, exact</li>
+            <li><b>MLP</b> : back-propagation with Adam, mini-batch SGD</li>
+            <li><b>XGBoost</b> : 2nd-order Taylor expansion at each boost step</li>
           </ul>
         </div>
       </div>
@@ -412,14 +412,14 @@
         <div class="eq-footer">
           <div class="eq-footer-h">Decision for this dataset</div>
           <ul class="eq-footer-list">
-            <li>Class ratio <b>51 : 49</b> — well inside the "skip" zone</li>
+            <li>Class ratio <b>51 : 49</b> : well inside the "skip" zone</li>
             <li>Pipeline runs a <span class="mono">SMOTE-check</span> before fit; trips only when minority &lt; 30 %</li>
             <li>If TESS data tips the balance, the same pipeline auto-enables it</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="pull" style="margin-top:18px;">All models in the zoo descend from one of these three ideas — <b>linear margins, gradient-optimised probabilities, or local interpolation</b>.</div>
+    <div class="pull" style="margin-top:18px;">All models in the zoo descend from one of these three ideas : <b>linear margins, gradient-optimised probabilities, or local interpolation</b>.</div>
     <div class="g-3" style="gap:20px; margin-top:18px;">
       <div class="card"><div class="ch">Gradient-optimised loss</div>
         <div class="cd" style="font-size:15px; line-height:1.5;"><b style="color:var(--nasa-navy);">Logistic Regression</b> · <b style="color:var(--nasa-navy);">MLP</b> · <b style="color:var(--nasa-navy);">XGBoost</b><br/>Optimise binary cross-entropy directly. Predicted probabilities are calibrated as a side-effect.</div>
@@ -428,7 +428,7 @@
         <div class="cd" style="font-size:15px; line-height:1.5;"><b style="color:var(--nasa-navy);">SVM (RBF)</b><br/>Maximises the margin in a lifted Hilbert space via hinge loss. Probabilities require Platt scaling.</div>
       </div>
       <div class="card"><div class="ch">Tree / instance-based</div>
-        <div class="cd" style="font-size:15px; line-height:1.5;"><b style="color:var(--nasa-navy);">Decision Tree</b> · <b style="color:var(--nasa-navy);">Random Forest</b> · <b style="color:var(--nasa-navy);">k-NN</b><br/>No global loss — split with Gini / entropy or vote among local neighbours.</div>
+        <div class="cd" style="font-size:15px; line-height:1.5;"><b style="color:var(--nasa-navy);">Decision Tree</b> · <b style="color:var(--nasa-navy);">Random Forest</b> · <b style="color:var(--nasa-navy);">k-NN</b><br/>No global loss : split with Gini / entropy or vote among local neighbours.</div>
       </div>
     </div>
   </div>
@@ -453,7 +453,7 @@
         <tr><td><b>MLP (128, 64)</b></td><td>Differentiable non-linear function approximator</td><td>Captures higher-order interactions</td><td>Hungry for data, needs scaling</td></tr>
       </tbody>
     </table>
-    <div class="pull" style="margin-top:18px;">Each row picks a different inductive bias on purpose — <b>no two models share the same way of carving up the feature space</b>, so the comparison is honest end-to-end.</div>
+    <div class="pull" style="margin-top:18px;">Each row picks a different inductive bias on purpose : <b>no two models share the same way of carving up the feature space</b>, so the comparison is honest end-to-end.</div>
     <div class="g-3" style="gap:18px; margin-top:18px;">
       <div class="card">
         <div class="ch">Family 1 · Linear &amp; local</div>
@@ -483,7 +483,7 @@
     <h1 class="s-title">Seven modules · <span class="ac">78 unit tests</span> · one entry point</h1>
     <div class="fig" style="flex:1; min-height:0; margin-top:8px;">
       <div class="frame"><img src="../assets/ml-architecture.png" alt="Exoplanet Classification ML Pipeline Architecture"/></div>
-      <div class="cap" style="font-size:15px; line-height:1.5;">Read left to right: <b>data ingestion → preprocessing &amp; features → model training → evaluation &amp; export</b>. Every coloured box maps to one <span class="mono">src/*.py</span> module; the dashed swim-lanes group the four pipeline stages and the side panels gather configuration, visualisation, the single entry point, and the quality-engineering layer. <span class="mono">scripts/run_all.py</span> orchestrates the whole flow — figures, metrics and the serialised model artefact are all reproducible from one command.</div>
+      <div class="cap" style="font-size:15px; line-height:1.5;">Read left to right: <b>data ingestion → preprocessing &amp; features → model training → evaluation &amp; export</b>. Every coloured box maps to one <span class="mono">src/*.py</span> module; the dashed swim-lanes group the four pipeline stages and the side panels gather configuration, visualisation, the single entry point, and the quality-engineering layer. <span class="mono">scripts/run_all.py</span> orchestrates the whole flow : figures, metrics and the serialised model artefact are all reproducible from one command.</div>
     </div>
   </div>
   <div class="s-ftr"><span>github.com/AnderssonProgramming/exoplanet-ml-classifier</span><span>10 / 20</span></div>
@@ -518,7 +518,7 @@
         </div>
         <div class="fig" style="min-height:0; height:280px;">
           <div class="frame"><img src="../assets/figures/learning_curve_xgboost.png" alt="Learning curve XGBoost"/></div>
-          <div class="cap">XGBoost learning curve — <b>convergence reached</b>; further data brings diminishing F1 returns.</div>
+          <div class="cap">XGBoost learning curve : <b>convergence reached</b>; further data brings diminishing F1 returns.</div>
         </div>
       </div>
     </div>
@@ -534,7 +534,7 @@
         <div class="step">
           <div class="n">02</div>
           <div class="lbl">5-fold stratified CV</div>
-          <div class="desc">Imputer + scaler re-fit on each train fold — no leakage</div>
+          <div class="desc">Imputer + scaler re-fit on each train fold : no leakage</div>
         </div>
         <div class="arrow">→</div>
         <div class="step">
@@ -632,10 +632,10 @@
     <div class="eyebrow">Visual comparison 📈</div>
     <h1 class="s-title">XGBoost <span class="ac">dominates the convex hull</span> on both curves</h1>
     <div class="g-2" style="gap:24px;">
-      <div class="fig"><div class="frame"><img src="../assets/figures/overlay_roc_curves.png" alt="ROC curves"/></div><div class="cap"><b>ROC</b> — XGBoost &amp; RF separate cleanly from the linear/local pack across all thresholds.</div></div>
-      <div class="fig"><div class="frame"><img src="../assets/figures/overlay_pr_curves.png" alt="PR curves"/></div><div class="cap"><b>Precision-Recall</b> — gap widens precisely in the <b>high-recall regime</b> we care about.</div></div>
+      <div class="fig"><div class="frame"><img src="../assets/figures/overlay_roc_curves.png" alt="ROC curves"/></div><div class="cap"><b>ROC</b> : XGBoost &amp; RF separate cleanly from the linear/local pack across all thresholds.</div></div>
+      <div class="fig"><div class="frame"><img src="../assets/figures/overlay_pr_curves.png" alt="PR curves"/></div><div class="cap"><b>Precision-Recall</b> : gap widens precisely in the <b>high-recall regime</b> we care about.</div></div>
     </div>
-    <div class="pull" style="margin-top:18px;">No operating threshold flips the ranking — XGBoost is the dominant choice <b>at every false-positive rate</b>.</div>
+    <div class="pull" style="margin-top:18px;">No operating threshold flips the ranking : XGBoost is the dominant choice <b>at every false-positive rate</b>.</div>
   </div>
   <div class="s-ftr"><span>reports/figures · overlay_roc_curves · overlay_pr_curves</span><span>14 / 20</span></div>
 </section>
@@ -647,7 +647,7 @@
     <div class="eyebrow">Confusion matrices &amp; threshold tuning 🎚️</div>
     <h1 class="s-title">Lower threshold to <span class="ac">0.43</span> → +3 pp recall, almost free</h1>
     <div class="g-2-asym" style="grid-template-columns:1.7fr 1fr;">
-      <div class="fig"><div class="frame"><img src="../assets/figures/confusion_matrix_grid.png" alt="Confusion matrices"/></div><div class="cap">Errors are <b>roughly symmetric</b> — no model systematically over-calls either class.</div></div>
+      <div class="fig"><div class="frame"><img src="../assets/figures/confusion_matrix_grid.png" alt="Confusion matrices"/></div><div class="cap">Errors are <b>roughly symmetric</b> : no model systematically over-calls either class.</div></div>
       <div class="col">
         <table class="threshold-table">
           <thead><tr><th>Threshold</th><th style="text-align:right;">F1</th><th style="text-align:right;">Precision</th><th style="text-align:right;">Recall</th></tr></thead>
@@ -657,11 +657,11 @@
             <tr><td class="mono">0.35  (aggressive)</td><td class="mono" style="text-align:right;">0.851</td><td class="mono" style="text-align:right;">0.788</td><td class="mono" style="text-align:right;">0.926</td></tr>
           </tbody>
         </table>
-        <div class="card featured"><div class="ch">Operating point</div><div class="ct">Youden's J ≈ 0.43</div><div class="cd">Trades ~2 pp precision for ~3 pp recall — net positive when the cost of a <b>missed planet</b> exceeds the cost of a <b>wasted follow-up</b>.</div></div>
+        <div class="card featured"><div class="ch">Operating point</div><div class="ct">Youden's J ≈ 0.43</div><div class="cd">Trades ~2 pp precision for ~3 pp recall : net positive when the cost of a <b>missed planet</b> exceeds the cost of a <b>wasted follow-up</b>.</div></div>
         <div class="card">
           <div class="ch">Youden's J · method</div>
           <div class="ct">$\tau^{\star} = \mathrm{argmax}_\tau\,[\mathrm{TPR}(\tau) - \mathrm{FPR}(\tau)]$</div>
-          <div class="cd">Picks the ROC point farthest above the random-classifier diagonal — equal weight to sensitivity and specificity, no manual hyperparameter to set, fully data-driven on the validation predictions.</div>
+          <div class="cd">Picks the ROC point farthest above the random-classifier diagonal : equal weight to sensitivity and specificity, no manual hyperparameter to set, fully data-driven on the validation predictions.</div>
         </div>
         <div class="card dark">
           <div class="ch">Why recall &gt; precision here</div>
@@ -685,21 +685,21 @@
       <div class="col center-y">
         <div class="card"><div class="ch">Top 3 features</div>
           <div class="cd" style="font-size:18px; line-height:1.8;">
-            <b style="color:var(--nasa-orange-700);">1 · koi_prad</b> — planetary radius (Earth radii)<br/>
-            <b style="color:var(--nasa-orange-700);">2 · koi_insol</b> — insolation flux (Earth units)<br/>
-            <b style="color:var(--nasa-orange-700);">3 · koi_period</b> — orbital period (days)
+            <b style="color:var(--nasa-orange-700);">1 · koi_prad</b> : planetary radius (Earth radii)<br/>
+            <b style="color:var(--nasa-orange-700);">2 · koi_insol</b> : insolation flux (Earth units)<br/>
+            <b style="color:var(--nasa-orange-700);">3 · koi_period</b> : orbital period (days)
           </div>
         </div>
         <div class="card">
           <div class="ch">Why these are physically sensible</div>
           <div class="cd" style="font-size:15px; line-height:1.55;">
-            <b>koi_prad</b> sets the discovery class — Earth-to-Neptune sized objects are real; many false positives back-out as star-sized "planets".<br/><br/>
-            <b>koi_insol</b> is a composite of period, stellar T<sub>eff</sub> and stellar radius — it tells the model whether the geometry is astrophysically self-consistent.<br/><br/>
+            <b>koi_prad</b> sets the discovery class : Earth-to-Neptune sized objects are real; many false positives back-out as star-sized "planets".<br/><br/>
+            <b>koi_insol</b> is a composite of period, stellar T<sub>eff</sub> and stellar radius : it tells the model whether the geometry is astrophysically self-consistent.<br/><br/>
             <b>koi_period</b> distributions differ between real planets and eclipsing binaries (binaries cluster at very short, synchronous periods).
           </div>
         </div>
-        <div class="card"><div class="ch">Cross-model agreement</div><div class="cd">Logistic-regression coefficients agree on <b>direction</b> with XGBoost gain — a robust sanity check that the model is not learning spurious correlations.</div></div>
-        <div class="pull">Exactly the columns a <b>transit astronomer</b> would inspect first — model behaviour matches domain intuition.</div>
+        <div class="card"><div class="ch">Cross-model agreement</div><div class="cd">Logistic-regression coefficients agree on <b>direction</b> with XGBoost gain : a robust sanity check that the model is not learning spurious correlations.</div></div>
+        <div class="pull">Exactly the columns a <b>transit astronomer</b> would inspect first : model behaviour matches domain intuition.</div>
       </div>
     </div>
   </div>
@@ -731,16 +731,16 @@
             <tr><td class="f">koi_period</td><td class="no">·</td><td class="yes">✓</td><td class="yes">✓</td></tr>
           </tbody>
         </table>
-        <div class="cd" style="margin-top:auto; padding-top:6px;">All three families agree on the <b>top 3</b> — a strong robustness signal.</div>
+        <div class="cd" style="margin-top:auto; padding-top:6px;">All three families agree on the <b>top 3</b> : a strong robustness signal.</div>
       </div>
       <div class="card" style="display:flex; flex-direction:column;">
         <div class="ch">Session 06 · GMM · t-SNE · UMAP</div>
         <div class="ct">Geometry of the test split</div>
-        <div class="cd" style="flex:1;">GMM with BIC/AIC selects <b>k = 3 components</b> (a sub-cluster inside CANDIDATE — likely short-period super-Earths). t-SNE and UMAP both expose curved manifolds — confirming why kernel and ensemble models beat linear ones.</div>
+        <div class="cd" style="flex:1;">GMM with BIC/AIC selects <b>k = 3 components</b> (a sub-cluster inside CANDIDATE — likely short-period super-Earths). t-SNE and UMAP both expose curved manifolds : confirming why kernel and ensemble models beat linear ones.</div>
       </div>
     </div>
     <div class="g-2" style="gap:18px; margin-top:18px; flex:1; min-height:0;">
-      <div class="fig"><div class="frame"><img src="../assets/figures/feature_selection_comparison.png" alt="Feature selection comparison"/></div><div class="cap">Filter · wrapper · embedded selectors — <b>three methods, same top features</b>.</div></div>
+      <div class="fig"><div class="frame"><img src="../assets/figures/feature_selection_comparison.png" alt="Feature selection comparison"/></div><div class="cap">Filter · wrapper · embedded selectors : <b>three methods, same top features</b>.</div></div>
       <div class="fig"><div class="frame"><img src="../assets/figures/gmm_pca_ellipses.png" alt="GMM ellipses"/></div><div class="cap">GMM components on PC1–PC2 — <b>3 ellipses</b>, with one nested inside the CANDIDATE cloud.</div></div>
     </div>
   </div>
@@ -757,17 +757,17 @@
       <div class="app-card">
         <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
         <h3>NASA archive operators</h3>
-        <p>Faster triage of incoming KOIs — minutes instead of days. The model produces a calibrated probability + Youden-tuned label for every new entry in the cumulative table.</p>
+        <p>Faster triage of incoming KOIs : minutes instead of days. The model produces a calibrated probability + Youden-tuned label for every new entry in the cumulative table.</p>
       </div>
       <div class="app-card">
         <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 19h18M5 19V9l7-5 7 5v10M9 14h6"/></svg></div>
         <h3>Transit astronomers</h3>
-        <p>Higher-purity follow-up lists — less wasted telescope time per confirmed planet. The threshold can be re-tuned per observing program (recall-heavy vs precision-heavy).</p>
+        <p>Higher-purity follow-up lists : less wasted telescope time per confirmed planet. The threshold can be re-tuned per observing program (recall-heavy vs precision-heavy).</p>
       </div>
       <div class="app-card">
         <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2"/></svg></div>
         <h3>Education &amp; research</h3>
-        <p>An open, fully reproducible baseline under Apache 2.0 — fork it, swap in a new model, re-run the same evaluation grid in a single command.</p>
+        <p>An open, fully reproducible baseline under Apache 2.0 : fork it, swap in a new model, re-run the same evaluation grid in a single command.</p>
       </div>
     </div>
     <div class="metric-row" style="grid-template-columns:repeat(4,1fr); margin-top:18px;">
@@ -779,22 +779,22 @@
     <div class="g-2" style="gap:24px; margin-top:18px;">
       <div class="card featured">
         <div class="ch">Honest limitation</div>
-        <div class="ct">Tabular features only — no light-curve morphology.</div>
+        <div class="ct">Tabular features only : no light-curve morphology.</div>
         <div class="cd">A transit-shape CNN (ECI Centauri's <span class="mono">astronet-cnn-v3</span>) is the natural next stage; combining its prediction with this XGBoost classifier is on the roadmap.</div>
         <div class="card-extra">
           <div class="card-extra-h">What tabular features can't see</div>
           <ul class="card-extra-list">
-            <li><b>Transit shape</b> — V-shaped (eclipsing binary) vs U-shaped (real planet)</li>
-            <li><b>Limb darkening</b> — depth varies with where on the stellar disk the transit happens</li>
-            <li><b>Secondary eclipses</b> — visible at half the orbit for binaries, absent for planets</li>
-            <li><b>Transit-timing variations</b> — gravitational interactions with additional bodies</li>
+            <li><b>Transit shape</b> : V-shaped (eclipsing binary) vs U-shaped (real planet)</li>
+            <li><b>Limb darkening</b> : depth varies with where on the stellar disk the transit happens</li>
+            <li><b>Secondary eclipses</b> : visible at half the orbit for binaries, absent for planets</li>
+            <li><b>Transit-timing variations</b> : gravitational interactions with additional bodies</li>
           </ul>
         </div>
       </div>
       <div class="card dark">
         <div class="ch">Production hand-off</div>
         <div class="ct">From notebook to <span class="mono">.joblib</span> in one command.</div>
-        <div class="cd"><span class="mono">joblib.load("best_xgboost.joblib")</span> reproduces the winning pipeline byte-for-byte — preprocessing + classifier + Youden-tuned threshold — ready to drop into a FastAPI endpoint.</div>
+        <div class="cd"><span class="mono">joblib.load("best_xgboost.joblib")</span> reproduces the winning pipeline byte-for-byte : preprocessing + classifier + Youden-tuned threshold — ready to drop into a FastAPI endpoint.</div>
         <div class="card-extra">
           <div class="card-extra-h">Minimal inference pattern</div>
 <pre><span class="kw">from</span> joblib <span class="kw">import</span> load
@@ -822,10 +822,10 @@ labels   = proba &gt; <span class="num">0.43</span>   <span class="cm"># Youden-
     <div class="g-2-asym" style="flex:0 0 auto;">
       <div class="col">
         <ul class="bullets">
-          <li><b>Tuned XGBoost is the winner</b> — F1 = 0.860 · ROC-AUC = 0.936 · MCC = 0.721 on the held-out 20 % test split.</li>
+          <li><b>Tuned XGBoost is the winner</b> : F1 = 0.860 · ROC-AUC = 0.936 · MCC = 0.721 on the held-out 20 % test split.</li>
           <li><b>Removing label leakage</b> was the single most important methodological decision.</li>
           <li><b>Threshold tuning via Youden's J</b> gives a recall boost almost for free.</li>
-          <li><b>Three feature-selection families agree</b> on the top 3 features — physically interpretable.</li>
+          <li><b>Three feature-selection families agree</b> on the top 3 features : physically interpretable.</li>
         </ul>
       </div>
       <div class="col">
@@ -849,12 +849,12 @@ labels   = proba &gt; <span class="num">0.43</span>   <span class="cm"># Youden-
       <div class="card">
         <div class="ch">Transferable lesson · 2</div>
         <div class="ct">Wrap preprocessing in the Pipeline</div>
-        <div class="cd">Imputer and scaler refit on each CV fold — never on the full dataset. The single biggest source of silent overfitting in tabular ML disappears the moment you put everything inside <span class="mono">sklearn.pipeline.Pipeline</span>.</div>
+        <div class="cd">Imputer and scaler refit on each CV fold : never on the full dataset. The single biggest source of silent overfitting in tabular ML disappears the moment you put everything inside <span class="mono">sklearn.pipeline.Pipeline</span>.</div>
       </div>
       <div class="card">
         <div class="ch">Transferable lesson · 3</div>
         <div class="ct">Tune the threshold for asymmetric costs</div>
-        <div class="cd">The default 0.5 cut-off is almost never optimal. Whenever FN cost ≠ FP cost — and that's <i>most</i> real-world problems — Youden's J on the validation set is a one-line, hyperparameter-free win.</div>
+        <div class="cd">The default 0.5 cut-off is almost never optimal. Whenever FN cost ≠ FP cost — and that's <i>most</i> real-world problems : Youden's J on the validation set is a one-line, hyperparameter-free win.</div>
       </div>
     </div>
     <div style="margin-top:auto; padding-top:22px;">
@@ -900,7 +900,7 @@ labels   = proba &gt; <span class="num">0.43</span>   <span class="cm"># Youden-
       <div>
         <div class="title-eyebrow">Machine Learning · MLEA_M · 2026-1</div>
         <h1 class="close-h">Thank<span class="a">.</span><br/>you<span class="a">.</span></h1>
-        <div class="close-deck">Questions, comments, and challenges welcome — especially on threshold policy, leakage handling, and how this classifier would compose with a light-curve CNN.</div>
+        <div class="close-deck">Questions, comments, and challenges welcome : especially on threshold policy, leakage handling, and how this classifier would compose with a light-curve CNN.</div>
       </div>
       <div class="close-ack">
         <div class="grp"><div class="lbl">Authors · email</div><div class="val"><span class="mn">andersson.sanchez-m@mail.escuelaing.edu.co</span><br/><span class="mn">cristian.pedraza-r@mail.escuelaing.edu.co</span></div></div>

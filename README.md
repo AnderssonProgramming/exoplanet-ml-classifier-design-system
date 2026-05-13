@@ -276,7 +276,7 @@ The hackathon system answered *"can we build something that triages KOIs in 48 h
 ## 🎓 Where this lives
 
 - **Course:** MLEA_M — *Machine Learning*, Master in Data Science, **Escuela Colombiana de Ingeniería Julio Garavito**, period 2026-1.
-- **Defence date:** May 15, 2026.
+- **Presentation date:** May 15, 2026.
 - **Authors:**
   - **Andersson David Sánchez Méndez** — [@AnderssonProgramming](https://github.com/AnderssonProgramming) · <andersson.sanchez-m@mail.escuelaing.edu.co>
   - **Cristian Santiago Pedraza Rodríguez** — [@cris-eci](https://github.com/cris-eci) · <cristian.pedraza-r@mail.escuelaing.edu.co>
@@ -307,7 +307,7 @@ If you build on this design system, please cite:
   title  = {ECI Centauri · Exoplanet ML — Design System},
   author = {S{\'a}nchez M{\'e}ndez, Andersson David and Pedraza Rodr{\'i}guez, Cristian Santiago},
   year   = {2026},
-  note   = {Visual system for the MLEA\_M defence at Escuela Colombiana de Ingenier{\'i}a Julio Garavito},
+  note   = {Visual system for the MLEA\_M presentation at Escuela Colombiana de Ingenier{\'i}a Julio Garavito},
   howpublished = {\url{https://github.com/AnderssonProgramming/exoplanet-ml-classifier-design-system}}
 }
 ```
