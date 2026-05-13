@@ -1,0 +1,27 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies (if any)
+node_modules/
+bower_components/
+
+# Build outputs (potential)
+dist/
+build/
+out/
+
+# Local data / Temp
+.temp/
+.cache/
+*.log
+
+# Design System Specific
+# (Add any specific files that are generated locally if applicable)

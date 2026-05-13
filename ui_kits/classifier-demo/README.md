@@ -2,7 +2,7 @@
 
 A high-fidelity recreation of the ECI Centauri **Exoplanet Hunter** companion web tool: a one-page interactive demo that lets a researcher paste in 13 KOI features, hit **Predict**, and see the model's verdict — `CANDIDATE` or `FALSE POSITIVE` — alongside its probability, the threshold dial, the top contributing features, and the model leaderboard.
 
-The kit is **cosmetic** — it doesn't ship the real `best_xgboost.joblib`. It uses a small JS stand-in that mimics the model's output so the layout and interactions are real.
+The kit is **cosmetic**: it doesn't ship the real `best_xgboost.joblib`. It uses a small JS stand-in that mimics the model's output so the layout and interactions are real.
 
 ## Files
 - `index.html` — assembled demo (loads all components below)
