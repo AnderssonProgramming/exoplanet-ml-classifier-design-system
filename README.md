@@ -42,6 +42,11 @@
 
 <sub>**Built for** the 15 May 2026 MLEA_M presentation at **Escuela Colombiana de Ingeniería Julio Garavito** · **Team** ECI Centauri — *Andersson Sánchez · Cristian Pedraza*</sub>
 
+<br/><br/>
+
+🎥 **Video Walkthrough:** [Watch our full project explanation on YouTube](https://youtu.be/EeGQ5s_lnq4)
+<sub>Full defense of the pipeline, design system and results — presented by Andersson Sánchez &amp; Cristian Pedraza.</sub>
+
 </div>
 
 ---
